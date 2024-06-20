@@ -1,0 +1,33 @@
+mimosa:
+  web:
+    strict: false
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: 1922 System
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:}
+
+logging:
+  level:
+    sql: DEBUG
+    tw.com.fcb.mimosa: DEBUG
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    io.jaegertracing.internal.reporters.RemoteReporter: FATAL
+    jdbc:
+      resultsettable: INFO
+      sqltiming: INFO
+      sqlonly: FATAL
+      audit: FATAL
+      resultset: FATAL
+      connection: FATAL
+log4jdbc:
+  dump:
+    sql:
+      addsemicolon: true
+      maxlinelength: 0
+  trim:
+    sql:
+      extrablanklines: false

@@ -1,0 +1,4 @@
+replicas: 2
+image:
+  name: demo
+  tag: 0.0.1
